@@ -1,13 +1,13 @@
 import '@webcomponents/webcomponentsjs';
-import { Element as PolymerElement } from '@polymer/polymer/polymer-element';
+import { Element, html } from '@polymer/polymer/polymer-element';
 
 import './ultimate-pagination';
 
-export class UltimatePaginationDemo extends PolymerElement {
+export class UltimatePaginationDemo extends Element {
   static get is() { return 'ultimate-pagination-demo'; }
 
   static get template() {
-    return `
+    return html`
       <h1>polymer-ultimate-pagination</h1>
       <fieldset>
         <legend>Configuration</legend>
@@ -24,8 +24,8 @@ export class UltimatePaginationDemo extends PolymerElement {
       <fieldset>
         <legend>Component</legend>
         <ultimate-pagination
-          current-page="[[currentPage]]"
-          total-pages="[[totalPages]]"
+          current-page="{{currentPage}}"
+          total-pages="{{totalPages}}"
         ></ultimate-pagination>
       </fieldset>
     `;

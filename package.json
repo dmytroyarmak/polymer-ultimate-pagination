@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@polymer/polymer": "^3.0.0-pre.11",
-    "@webcomponents/webcomponentsjs": "^1.1.0"
+    "@webcomponents/webcomponentsjs": "^1.1.0",
+    "ultimate-pagination": "^1.0.0"
   }
 }
