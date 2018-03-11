@@ -12,6 +12,7 @@ export class UltimatePagination extends Element {
         <button
           style$="[[getButtonStyle(item)]]"
           on-click="onClickPaginationButton"
+          disabled="[[disabled]]"
         >[[getButtonText(item)]]</button>
       </template>
     `;
@@ -26,6 +27,9 @@ export class UltimatePagination extends Element {
       totalPages: {
         type: Number,
         notify: true
+      },
+      disabled: {
+        type: Boolean
       },
       paginationModel: {
         type: Object,

@@ -19,6 +19,10 @@ export class UltimatePaginationDemo extends Element {
           <label for="total-pages-input">Total pages</label>
           <input id="total-pages-input" type="number" value="{{totalPages::input}}" />
         </div>
+        <div>
+          <label for="is-disabled-checkbox">Disabled</label>
+          <input id="is-disabled-checkbox" type="checkbox" checked="{{disabled::change}}" />
+        </div>
       </fieldset>
 
       <fieldset>
@@ -26,6 +30,7 @@ export class UltimatePaginationDemo extends Element {
         <ultimate-pagination
           current-page="{{currentPage}}"
           total-pages="{{totalPages}}"
+          disabled="[[disabled]]"
         ></ultimate-pagination>
       </fieldset>
     `;
@@ -35,6 +40,7 @@ export class UltimatePaginationDemo extends Element {
     super();
     this.currentPage = 1;
     this.totalPages = 10;
+    this.disabled = false;
   }
 }
 
